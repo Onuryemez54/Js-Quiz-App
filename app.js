@@ -112,9 +112,9 @@ function startTimer() {
     if(count>10) {
       clearInterval(timer);
       quizCounter.innerText = 'Time is up! Please answer the question.'
+      currentQuiz++;
       setTimeout(() => {
         if(currentQuiz<quizData.length) {
-          currentQuiz++;
           loadQuiz();
           startTimer();
         } 
